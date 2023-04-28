@@ -1,0 +1,8 @@
+logging:
+  level:
+    root: info
+  file:
+    name: "E:\\download\\pdb\\log.out"
+
+upload:
+  dir: "E:\\download\\pdb"

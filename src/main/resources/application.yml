@@ -1,0 +1,52 @@
+server:
+  port: 10086
+
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/ry?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    username: root
+    password: Huang@123
+  redis:
+    host: 120.76.172.54
+    port: 6379
+    password: Huang@123
+    lettuce:
+      pool:
+        # 最大连接
+        max-active: 8
+        # 最大空闲连接
+        max-idle: 8
+        # 最小空闲连接
+        min-idle: 0
+        # 连接等待时间
+        max-wait: 1000ms
+  # httpServlet上传最大文件限制
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 1000MB
+  rabbitmq:
+    host: 172.18.136.224
+    port: 5672
+    virtual-host: /
+    username: root
+    password: root
+    pdb-queue-name: "PdbQueue"
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: 811427708@qq.com
+    password: yiceuzlqbljcbbje
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+        debug: false
+
+gpu:
+  threshold: 20.0
