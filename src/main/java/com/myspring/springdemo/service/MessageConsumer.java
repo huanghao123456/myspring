@@ -26,11 +26,11 @@ public class MessageConsumer {
     private ManagerServiceImpl managerService;
 
     /**
-     * 每2分钟监测一次GPU使用情况，若使用率低，则代表上一任务已经执行完，继而可以提交新任务
+     * 每10分钟监测一次GPU使用情况，若使用率低，则代表上一任务已经执行完，继而可以提交新任务
      */
-    @Scheduled(cron = "0 0/2 * * * ?")
+    @Scheduled(cron = "0 0/10 * * * ?")
     public void watchGpu() {
-        // 目前的服务器上1仅一张显卡
+        // 目前的服务器上仅一张显卡
         double usageRate = managerService.getGpuStatus().get(0).getUsageRate();
 
         if (usageRate > taskCompletedSign) {

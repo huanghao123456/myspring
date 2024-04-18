@@ -20,7 +20,7 @@ import java.util.Objects;
 @Slf4j
 @Service
 public class ResultNotification {
-    private final String uri = "http://172.18.136.224/task_viewer.html?task_name=";
+    private final String uri = "http://172.19.238.240/task_viewer.html?task_name=";
     @Value("${spring.mail.username}")
     private String from;
 

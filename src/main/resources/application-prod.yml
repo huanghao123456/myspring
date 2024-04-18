@@ -2,7 +2,7 @@ logging:
   level:
     root: info
   file:
-    name: "/data/huanghao/pdb/log.out"
+    name: "/home/b827/pdb/log.out"
 
 upload:
-  dir: "/data/huanghao/pdb"
+  dir: "/home/b827/pdb"

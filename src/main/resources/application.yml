@@ -29,7 +29,8 @@ spring:
       max-file-size: 100MB
       max-request-size: 1000MB
   rabbitmq:
-    host: 172.22.194.210
+#    host: 192.168.3.8
+    host: 172.19.238.240
     port: 5672
     virtual-host: /
     username: root
@@ -39,7 +40,7 @@ spring:
     host: smtp.qq.com
     port: 465
     username: 811427708@qq.com
-    password: yiceuzlqbljcbbje
+    password: mmcyijbygkacbdjg
     default-encoding: UTF-8
     properties:
       mail:
