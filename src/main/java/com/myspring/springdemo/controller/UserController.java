@@ -5,6 +5,7 @@ import com.myspring.springdemo.common.result.RestResult;
 import com.myspring.springdemo.common.result.RestResultUtils;
 import com.myspring.springdemo.entity.dto.LoginFormDTO;
 import com.myspring.springdemo.service.IUserService;
+import org.springframework.data.util.Pair;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -53,5 +54,10 @@ public class UserController {
         map.put("des3", "435");
         return RestResultUtils.success("开发完毕后，这将会是一个关于结果的大json", map);
 
+    }
+
+    @PostMapping("/calcDistMatrix")
+    public RestResult<Pair<String, String>> calcDistMatrix(@NotBlank @RequestParam("pdbId") String pdbId) {
+        return userService.calcDistMatrix(pdbId);
     }
 }

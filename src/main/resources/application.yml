@@ -29,7 +29,7 @@ spring:
       max-file-size: 100MB
       max-request-size: 1000MB
   rabbitmq:
-    host: 172.18.136.224
+    host: 172.22.194.210
     port: 5672
     virtual-host: /
     username: root
